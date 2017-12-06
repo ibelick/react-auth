@@ -1,4 +1,0 @@
-{
-  "dbUri": "mongodb://ibelick:weshwesh@ds123796.mlab.com:23796/react-auth-crud",
-  "jwtSecret": "secret walla"
-}
