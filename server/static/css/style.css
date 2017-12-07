@@ -7,11 +7,11 @@
 a {
   text-decoration: none;
   transition: .5s ease;
-  color: #938f9e;
+  color: #000;
 }
 
 a:hover {
-  color: #54525a;
+  color: #000;
 }
 
 body {
@@ -24,17 +24,14 @@ p {
   font-size: 12px;
 }
 
-h2 {
-  font-size: 18px;
-}
-
 input {
   outline: none;
-  background: none;
   border: none;
+  background: none;
+  font-size: 14px;
 }
 
-input:focus {
+input[type="text"]:focus, input[type="password"]:focus {
   background: none;
 }
 
@@ -43,6 +40,13 @@ textarea {
   border: none;
   background: none;
   outline: none;
+}
+
+.ui-title {
+  background-image: linear-gradient(180deg, transparent 65%, #FFC001 0);
+  background-size: 150% 150%;
+  background-position: 40% 50%;
+  background-repeat: no-repeat;
 }
 
 .btn {
@@ -121,9 +125,9 @@ header {
 /* AUTH */
 .wrapper-auth {
   height: 100vh;
-  background: #E0EAFC;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #56CCF2;
+  background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
+  background: linear-gradient(to right, #2F80ED, #56CCF2);
 }
 
 .wrapper-auth form {
@@ -144,7 +148,24 @@ header {
 }
 
 .title-auth {
-  color: #938f9e;
+  color: #3181ed;
+}
+
+.btn-auth {
+  background: rgb(255,187,1);
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.03);
+  background: -webkit-linear-gradient(45deg, rgba(255,187,1,1) 0%,rgba(255,222,2,1) 100%);
+  background: linear-gradient(45deg, rgba(255,187,1,1) 0%,rgba(255,222,2,1) 100%);
+
+}
+
+.account-link {
+  color: #FFC001;
+}
+
+.errors-form {
+  color: #FFC001;
+  font-weight: bold;
 }
 
 /* DASHBOARD */

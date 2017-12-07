@@ -5,15 +5,16 @@ import { Link } from 'react-router-dom'
 const LoginForm = ({ onSubmit, onChange, errors, successMessage, user }) => (
   <div className="centerv centerh wrapper-auth">
     <form action="/" onSubmit={onSubmit} >
-      <h2 className="text-center title-auth">Log in</h2>
+      <h2 className="text-center title-auth"><span className="ui-title">Log in</span></h2>
 
       <div>
 
-        {successMessage && <p>{successMessage}</p>}
-        {errors.summary && <p>{errors.summary}</p>}
+        {successMessage && <p className="errors-form">{successMessage}</p>}
+        {errors.summary && <p className="errors-form">{errors.summary}</p>}
 
         <div className="fcol">
           <input
+            type="text"
             name="email"
             placeholder="Email"
             errortext={errors.email}
@@ -21,7 +22,7 @@ const LoginForm = ({ onSubmit, onChange, errors, successMessage, user }) => (
             value={user.email}
             autoFocus
           />
-          <p>{errors.email}</p>
+          <p className="errors-form">{errors.email}</p>
         </div>
 
         <div className="fcol">
@@ -33,16 +34,19 @@ const LoginForm = ({ onSubmit, onChange, errors, successMessage, user }) => (
             errortext={errors.password}
             value={user.password}
           />
-        <p>{errors.password}</p>
+        <p className="errors-form">{errors.password}</p>
         </div>
 
       </div>
 
       <div>
-        <input className="btn" type="submit" value="Log in" />
-        <Link to="/signup">
-          <p>I don’t have an account</p>
-        </Link>
+        <input className="btn btn-auth" type="submit" value="Log in" />
+        <div className="frow">
+          <p>Don’t have an account? &nbsp;</p>
+          <Link to="/signup">
+            <p className="account-link">Create one</p>
+          </Link>
+        </div>
       </div>
 
     </form>

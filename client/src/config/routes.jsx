@@ -18,7 +18,7 @@ import AddPage from './../containers/AddPage.jsx'
 import PostPage from './../containers/PostPage.jsx'
 
 const Routes = () => (
-  <Router>
+  <HashRouter>
     <Switch>
       <Route exact path="/" component={HomePage} />
       <Route path="/login" component={LoginPage} />
@@ -27,7 +27,7 @@ const Routes = () => (
       <PrivateRoute path="/add" component={AddPage} />
       <PrivateRoute path="/posts" component={PostPage} />
     </Switch>
-  </Router>
+  </HashRouter>
 )
 
 const PrivateRoute = ({component: Component, ...rest}) => (
